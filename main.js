@@ -36,8 +36,8 @@ setTimeout(function(){
 
 imgId = "selfie1";
 takeSelfie();
-speakData="Tirar sua selfie em 10 segundos";
-var utterThis= new SpeechSynthesisUtterance(speakData);
+speakData = "Tirarando sua selfie em 10 segundos";
+var utterThis = new SpeechSynthesisUtterance(speakData);
 synth.speak(utterThis);
 
 },5000);
@@ -60,8 +60,8 @@ setTimeout(function(){
 
     imgId = "selfie3";
     takeSelfie();
-    speakData="Tirar sua selfie em 20 segundos";
-    var utterThis= new SpeechSynthesisUtterance(speakData);
+    speakData = "Tirar sua selfie em 20 segundos";
+    var utterThis = new SpeechSynthesisUtterance(speakData);
     synth.speak(utterThis);
     
     },15000);
@@ -70,7 +70,7 @@ setTimeout(function(){
         {
             console.log(imgId);
 
-            Webcam.snap(function(data_ur){
+            Webcam.snap(function(data_uri){
                 if(imgId=="selfie1"){
                     document.getElementById("result1").innerHTML = '<img id="selfie1" src="'+data_uri+'" />';
                 }
